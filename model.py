@@ -5,8 +5,16 @@ class Service:
         self.name = name
         self.characteristics = characteristics
 
+class ReadWriteNotify():
+    def __init__(self, read, write, notify):
+        self.read = read
+        self.write = write
+        self.notify = notify
+
 class Characteristic:
-    def __init__(self, name, data_type=SonicareValueType.RAW, enum=None):
+    def __init__(self, name, readwritenotify, data_type=SonicareValueType.RAW, enum=None):
         self.name = name
         self.data_type = data_type
         self.enum = enum
+        self.readWriteNotify = readwritenotify
+    

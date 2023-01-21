@@ -7,7 +7,7 @@ class SonicareHandleState(Enum):
     CHARGE = 3
     SHUTDOWN = 4
     VALIDATE = 6
-    UNKNOWN = 7
+    LIGHTS_OUT = 7
 
 class SonicareValueType(Enum):
     STRING = 0
