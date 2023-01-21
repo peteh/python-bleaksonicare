@@ -17,7 +17,7 @@ async def my_callback(sender, data):
 async def readServicedata(client, service_uuid, characteristic_uuid):
     #characteristic = await client.find_characteristic(service_uuid, characteristic_uuid)
     data = await client.read_gatt_char(characteristic_uuid)
-    print("Data received:", data)
+    print("Data received:" + data.hex())
 
 async def main():
     e = asyncio.Event()
